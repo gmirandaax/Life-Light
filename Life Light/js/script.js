@@ -1,4 +1,4 @@
-// Toggle dark mode
+
 document.getElementById('themeToggle').addEventListener('click', function() {
     const darkModeStyle = document.getElementById('darkModeStyle');
     if (darkModeStyle.disabled) {
@@ -12,13 +12,12 @@ document.getElementById('themeToggle').addEventListener('click', function() {
     }
 });
 
-// Check for saved dark mode preference
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.getElementById('darkModeStyle').disabled = false;
     document.body.classList.add('dark-mode');
 }
 
-// Smooth scrolling for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -28,7 +27,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle (for smaller screens)
 function setupMobileMenu() {
     const menuToggle = document.createElement('button');
     menuToggle.className = 'menu-toggle';
@@ -56,7 +54,6 @@ function setupMobileMenu() {
     checkScreenSize();
 }
 
-// Initialize mobile menu if on a page with navigation
 if (document.querySelector('nav')) {
     setupMobileMenu();
 }

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if user is already logged in
     if (localStorage.getItem('currentUser')) {
         displayHistory();
     }
@@ -23,8 +22,6 @@ function handleLogin(e) {
         return;
     }
     
-    // In a real app, you would validate against a server/database
-    // For demo purposes, we'll use localStorage
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(u => u.email === email && u.password === password);
     

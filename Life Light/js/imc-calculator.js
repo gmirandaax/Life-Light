@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateBtn.addEventListener('click', calculateIMC);
     }
     
-    // Load history if user is logged in
     if (localStorage.getItem('currentUser')) {
         displayHistory();
     }
@@ -54,7 +53,6 @@ function calculateIMC() {
     resultDiv.style.backgroundColor = `${color}20`;
     resultDiv.style.borderLeft = `4px solid ${color}`;
     
-    // Save to history if logged in
     if (localStorage.getItem('currentUser')) {
         saveToHistory(imc.toFixed(1), classification);
     }
